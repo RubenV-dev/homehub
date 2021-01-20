@@ -19,16 +19,21 @@ let WeatherCard = () => {
     let returnedInfo = weatherInfo.current === undefined ? 
     <div className='weather'>
         <h1>Weather</h1>
-        <span>It's 79 degrees out today Sir.</span>
-        <p>Please Dress Lightly because it's also Musky</p>
-        <button onClick={()=>{weatherApiCall(setWeatherInfo)}}>Weather API CALL</button>
+        <p>Welcome. Press Below to Get Latest Weather Information</p>
+
+        <button onClick={()=>{weatherApiCall(setWeatherInfo)}}>Get Weather Information</button>
     </div> : 
     <div className='weather'>
     <h1>Weather</h1>
-    <span>It's 79 degrees out today Sir.</span>
-    <p>Please Dress Lightly because it's also Musky</p>
-    <p>Current Temperature : {weatherInfo.current.temp} Degrees F</p>
-    <button onClick={()=>{weatherApiCall(setWeatherInfo)}}>Weather API CALL</button>
+    <span>It's {weatherInfo.current.temp}ºF out today Sir.</span>
+    <p>However it feels like {weatherInfo.current.feels_like} ºF today.</p>
+    <p>We have Humidity of {weatherInfo.current.humidity}%</p>
+    <p>Dew Point {weatherInfo.current.dew_point} ºF</p>
+    <p>Atmospheric Pressure on the sea level {weatherInfo.current.humidity} hPa </p>
+    <p>Cloudiness: {weatherInfo.current.clouds} %</p>
+    <p>Current Wind Speeds: {weatherInfo.current.wind_speed} mph</p>
+
+    <button onClick={()=>{weatherApiCall(setWeatherInfo)}}>Get Lastest Weather Information</button>
     </div>
 
     return (
