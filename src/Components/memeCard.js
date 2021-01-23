@@ -24,7 +24,7 @@ let memeUrltoList = (memeObjArray) => {
 let MemeCard = () => {
     let [memeArray, setMemeArray] = useState({})
     let subCard = !!memeArray.length ? memeUrltoList(memeArray) : 
-    <p>"dont have anything"</p>
+    <p>"Click for Some Memes!!!"</p>
 
     return (
         <div className="meme-card">
