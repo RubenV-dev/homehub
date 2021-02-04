@@ -10,13 +10,13 @@
 } */
 
 .main {
-  /* width: 100%; */
+  width: 100%;
   min-height: 100vh;
 }
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  /* width: 100%; */
+  width: 100%;
   /* flex-direction: column; */
   height: 98vh;
 }
@@ -47,6 +47,10 @@
   text-align: center;
   width: 48%;
   height: 50%;
+}
+
+.todo-card ul {
+  /* list-style: none; */
 }
 
 
